@@ -1,0 +1,31 @@
+Challange 10 :
+
+Covert number to binary and check the number of consecutive'1' in binary number.
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+current_consecutive = 0
+maximum_consecutive = 0
+
+while n>0:
+    remainder = n % 2
+    if remainder == 1:
+        current_consecutive +=1
+        if current_consecutive > maximum_consecutive:
+            maximum_consecutive = current_consecutive
+    else:
+         current_consecutive =0
+    n=n//2        
+     
+print(maximum_consecutive)
