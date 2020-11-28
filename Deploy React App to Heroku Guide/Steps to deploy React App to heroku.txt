@@ -1,0 +1,57 @@
+Steps to deploy React App to heroku :
+
+Reference youtube:
+https://www.youtube.com/watch?v=CzsuPVc4Pss
+
+prerequisit :
+Create account on heroku
+
+1. Create an app inside Heroku
+2. Go to deploy
+3. In your local machine , open the app which need to be deployed . Inside that folder, press shift + right click and open the powershell window.
+4. git init
+5. heroku login
+	enter the credentials and close the browser tab and come back to powershell
+6. heroku git:remote -a ritesh-react  --> here ritesh-react is my app name.
+7. heroku buildpacks:set mars/create-react-app
+
+Use above command as it is after step 6.(copy paste)
+
+8. git add .
+9. git commit -m "first commit"
+10. git push heroku master
+11. heroku open
+
+All the above are one time installations steps. If you follow correctly , app will be live and running.
+If you want to update some code and again push the changes to server.
+
+Steps are as :
+1. Make changes in some files at local and again open the powershell in folder
+2. Make sure you are heroku loggin ( if not add heroku login)
+3. git add .
+4. git commit -m "second commit"
+5. git push heroku master
+6. heroku open 
+
+
+More Prerequisites:
+A react app should be already created and saved on local and is working
+Nodejs version on machine is matching with version mentioned on package.json file
+git 
+heroku cli
+basic react knowledge
+
+
+Note:
+If you want to use multiple accounts for heroku login via powershell, refer below link :
+https://github.com/heroku/heroku-accounts
+
+Live sites by following above:
+https://preeminent-hub-website.herokuapp.com/
+https://ritesh-react.herokuapp.com/
+
+
+Next Step :
+https://medium.com/@successengineer/how-to-setup-heroku-with-godaddy-d8e936d10849
+https://medium.com/@tcguy/a-beginner-friendly-guide-to-configure-godaddy-custom-domain-names-to-heroku-app-2019-edition-3561c721762
+
